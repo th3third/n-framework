@@ -1,0 +1,48 @@
+#header 
+{
+	background: white;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	padding-top: 56px;
+	width: 100%;
+
+	& #logo
+	{
+		position: absolute;
+		left: $buffer-standard;
+		top: 0px;
+		z-index: 1000;
+	}
+}
+
+.header_links 
+{
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+.header_links a 
+{
+	text-decoration: none;
+	color: #7c8796;
+}
+
+.header_links a:hover 
+{
+	text-decoration: underline;
+	color: #8ebcc3;
+}
+
+#loginInfo 
+{
+	text-align: right;
+	color: #505c6c;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding-right: $buffer-short;
+	margin: $buffer-short;
+}

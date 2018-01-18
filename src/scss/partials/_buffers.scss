@@ -1,0 +1,121 @@
+.buffer-top
+{
+	margin-top: $buffer-short !important;
+}
+
+.buffer-top-large
+{
+	margin-top: $buffer-standard !important;
+}
+
+.buffer-top-mega
+{
+	margin-top: $buffer-long !important;
+}
+
+.buffer-bottom
+{
+	margin-bottom: $buffer-short !important;
+}
+
+.buffer-bottom-large
+{
+	margin-bottom: $buffer-standard !important;
+}
+
+.buffer-bottom-mega
+{
+	margin-bottom: $buffer-long !important;
+}
+
+.buffer-right
+{
+	margin-right: $buffer-short !important;
+}
+
+.buffer-right-large
+{
+	margin-right: $buffer-standard !important;
+}
+
+.buffer-right-mega
+{
+	margin-right: $buffer-long !important;
+}
+
+.buffer-left
+{
+	margin-left: $buffer-short !important;
+}
+
+.buffer-left-large
+{
+	margin-left: $buffer-standard !important;
+}
+
+.buffer-left-mega
+{
+	margin-left: $buffer-long !important;
+}
+
+.padded
+{
+	padding: $buffer-short;
+}
+
+.no-padding
+{
+	padding: 0px !important;
+}
+
+.rounded
+{
+	@include border-radius($border-radius-amount);
+}
+
+.rounded-top
+{
+	-webkit-border-top-left-radius: $border-radius-amount;
+	-moz-border-top-left-radius: $border-radius-amount;
+	-ms-border-top-left-radius: $border-radius-amount;
+	border-top-left-radius: $border-radius-amount;
+
+	-webkit-border-top-right-radius: $border-radius-amount;
+	-moz-border-top-right-radius: $border-radius-amount;
+	-ms-border-top-right-radius: $border-radius-amount;
+	border-top-right-radius: $border-radius-amount;
+}
+
+.rounded-bottom
+{
+	-webkit-border-bottom-left-radius: $border-radius-amount;
+	-moz-border-bottom-left-radius: $border-radius-amount;
+	-ms-border-bottom-left-radius: $border-radius-amount;
+	border-bottom-left-radius: $border-radius-amount;
+
+	-webkit-border-bottom-right-radius: $border-radius-amount;
+	-moz-border-bottom-right-radius: $border-radius-amount;
+	-ms-border-bottom-right-radius: $border-radius-amount;
+	border-bottom-right-radius: $border-radius-amount;
+}
+
+.bordered
+{
+	border: 1px solid $primary-border-color;
+}
+
+.shadowed
+{
+	@include box-shadow(1px 1px 2px 0 rgba(0, 0, 0, 0.05));
+	border: 1px solid #DEF0F4;
+}
+
+.align-right
+{
+	margin-left: auto;
+}
+
+.align-center
+{
+	text-align: center;
+}

@@ -1,0 +1,34 @@
+#preview_window {
+  .body_preview {
+    display: inline-block;
+    vertical-align: top;
+    overflow-y: scroll;
+    width: 64%;
+    height: 100%;
+  }
+  .address_preview {
+    display: inline-block;
+    vertical-align: top;
+    overflow-y: scroll;
+    width: 35%;
+    height: 100%;
+    & .addresses
+    {
+      & li
+      {
+        padding: 3px;
+
+        &:hover
+        {
+          text-decoration: underline;
+        }
+
+        &.selected
+        {
+          background-color: white;
+          color: #348eda;
+        }
+      }
+    }
+  }
+}

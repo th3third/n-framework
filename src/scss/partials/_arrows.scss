@@ -1,0 +1,35 @@
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	
+	border-bottom: 40px solid #3E3E3E;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	
+	border-top: 40px solid #3E3E3E;
+}
+
+.arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	
+	border-left: 40px solid #3E3E3E;
+}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent; 
+	
+	border-right: 40px solid #3E3E3E; 
+}

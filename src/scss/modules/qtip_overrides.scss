@@ -1,0 +1,27 @@
+.qtip
+{
+	font-family: "Ubuntu" !important;
+	max-width: 400px !important;
+	font-size: 13px !important;
+}
+
+.qtip-long
+{
+	max-width: none !important;
+	overflow: auto !important;
+}
+
+.qtip-close
+{
+	border: 0px !important;
+	height: 18px !important;
+	font-size: 20px;
+	right: 3px !important;
+	margin-top: -4px !important;
+
+	& .ui-icon-close
+	{
+		height: 18px !important;
+		line-height: 15px !important;
+	}
+}

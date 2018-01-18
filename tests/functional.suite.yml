@@ -1,0 +1,28 @@
+# Codeception Test Suite Configuration
+
+# suite for functional (integration) tests.
+# emulate web requests and make application process them.
+# Include one of framework modules (Symfony2, Yii2, Laravel4) to use it.
+
+class_name: FunctionalTester
+modules:
+    enabled:
+        - Filesystem
+        - FunctionalHelper
+        - PhpBrowser:
+            url: ''
+            auth: ['admin', '123345']
+            curl:
+              CURLOPT_RETURNTRANSFER: true
+            cookies:
+              cookie-1:
+                Name: userName
+                Value: john.doe
+              cookie-2:
+                Name: authToken
+                Value: 1abcd2345
+                Domain: subdomain.domain.com
+                Path: /admin/
+                Expires: 1292177455
+                Secure: true
+                HttpOnly: false

@@ -1,0 +1,18 @@
+table.paging
+{
+	& tbody
+	{
+		& tr
+		{
+			& td
+			{
+				padding: 0px 3px;
+
+				&:last-child
+				{
+					padding: 0px;
+				}
+			}
+		}
+	}
+}

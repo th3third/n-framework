@@ -1,0 +1,132 @@
+label
+{
+	font-weight: normal;
+	display: inline-block;
+
+	&.above
+	{
+		margin: 0 0 0.3125em 0;
+	}
+}
+
+.form
+{
+	box-sizing: border-box;
+
+	& .inline
+	{
+		display: inline-block;
+	}
+
+	& label
+	{
+		display: inline-block;
+		width: 155px;
+		font-size: $input-font-size;
+		vertical-align: top;
+	}
+
+	span.description
+	{
+		margin-left: 158px;
+		margin-top: -10px;
+		display: inline-block;
+	}
+
+	& > .row-flex
+	{
+		margin-bottom: $buffer-standard;
+
+		& .row-item
+		{
+			margin-right: $buffer-standard;
+		}
+	}
+}
+
+form
+{
+	input
+	, select
+	{
+		&.error
+		{
+			border: 1px solid $primary-error-border;
+
+			& + br + span.description
+			{
+				color: $primary-red;
+			}
+		}
+	}
+
+	input
+	{
+		&[type='number']
+		{
+			&.percentage
+			{
+				width: 4.25em;
+			}
+
+			&.months
+			{
+				width: 3.75em;
+			}
+		}
+	}
+
+	span.description
+	{
+		font-size: 0.9em;
+		min-height: 13px;
+
+		&:before
+		{
+			content: "\A";
+	    	white-space: pre; 
+		}
+	}
+
+	select
+	, input[type='text']
+	{
+		
+	}
+
+	label
+	{
+		font-size: $input-font-size;
+		vertical-align: top;
+	}
+
+	textarea
+	{
+		&.full-width
+		{
+			width: 100%;
+		}
+
+		&.two-thirds-width
+		{
+			width: 66%;
+		}
+
+		height: 100px;
+	}
+
+	& > .row-flex
+	{
+		margin-bottom: $buffer-standard;
+
+		& .row-item
+		{
+			margin-right: $buffer-standard;
+
+			&:last-child
+			{
+				margin-right: 0px;
+			}
+		}
+	}
+}

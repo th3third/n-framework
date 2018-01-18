@@ -1,0 +1,14 @@
+.ui-dialog.ui-dialog-error 
+{
+	& .ui-dialog-titlebar
+	{
+		background: $primary-error !important;
+		border: 0px !important;
+		color: $primary-error-font !important;
+
+		& .ui-button
+		{
+			display: none;
+		}
+	}
+}

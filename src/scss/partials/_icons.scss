@@ -1,0 +1,560 @@
+icon
+, icon.small
+, icon.smaller
+, icon.smallest
+, icon.big
+, icon.bigger
+, icon.biggest
+{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 62px;
+	height: 64px;
+
+	&.preview
+	{
+		background-image: url("../images/icons/flat/96/magnify.png");
+	}
+
+	&.settings
+	{
+		background-image: url("../images/icons/flat/96/cog.png");
+	}
+
+	&.notepad
+	{
+		background-image: url("../images/icons/flat/96/notepad.png");
+	}
+
+	&.blog-post
+	{
+		background-image: url("../images/icons/flat/96/bubble.png");
+
+		&.add
+		, &.delete
+		, &.edit
+		, &.preview
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+		}
+
+		&.add
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/add.png")
+					, url("../images/icons/flat/96/bubble.png");
+		}
+
+		&.edit
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/pencil.png")
+					, url("../images/icons/flat/96/bubble.png");
+		}
+
+		&.delete
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/sign-delete.png")
+					, url("../images/icons/flat/96/bubble.png");
+		}
+
+		&.preview
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/magnify.png")
+					, url("../images/icons/flat/96/bubble.png");
+		}
+	}
+
+	&.blog
+	{
+		background-image: url("../images/icons/flat/96/bubbles.png");
+
+		&.add
+		, &.delete
+		, &.edit
+		, &.preview
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+		}
+
+		&.add
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/add.png")
+					, url("../images/icons/flat/96/bubbles.png");
+		}
+
+		&.edit
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/pencil.png")
+					, url("../images/icons/flat/96/bubbles.png");
+		}
+
+		&.delete
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/sign-delete.png")
+					, url("../images/icons/flat/96/bubbles.png");
+		}
+
+		&.preview
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/magnify.png")
+					, url("../images/icons/flat/96/bubbles.png");
+		}
+	}
+
+	&.grayscale 
+	{
+    	-webkit-filter: grayscale(100%);
+    }
+
+	&.delete
+	{
+		background-image: url("../images/icons/flat/96/sign-delete.png");
+	}
+
+	&.webmail
+	{
+		background-image: url("../images/icons/RoundCube.jpg");
+	}
+
+	&.light-bulb
+	{
+		background-image: url("../images/icons/flat/96/light-bulb.png");
+	}
+
+	&.ban
+	{
+		background-image: url("../images/icons/flat/96/sign-ban.png");
+	}
+
+	&.error
+	{
+		background-image: url("../images/icons/flat/96/sign-error.png");
+	}
+
+	&.warning
+	{
+		background-image: url("../images/icons/flat/96/sign-warning.png");
+	}
+
+	&.leaf
+	{
+		background-image: url("../images/icons/flat/96/leaf.png");
+	}
+
+	&.info
+	{
+		background-image: url("../images/icons/flat/96/sign-info.png");
+	}
+
+	&.user
+	{
+		background-image: url("../images/icons/flat/96/profile.png");
+
+		&.add
+		{
+			background-image: 
+				url("../images/icons/flat/96/sign-add.png")
+				, url("../images/icons/flat/96/profile.png");
+		}
+	}
+
+	&.globe
+	{
+		background-image: url("../images/icons/flat/96/globe.png");
+	}
+
+	&.document
+	{
+		background-image: url("../images/icons/flat/96/file-text.png");
+
+		&.add
+		, &.delete
+		, &.edit
+		, &.preview
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+		}
+
+		&.add
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/add.png")
+					, url("../images/icons/flat/96/file-text.png");
+		}
+
+		&.edit
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/pencil.png")
+					, url("../images/icons/flat/96/file-text.png");
+		}
+
+		&.delete
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/sign-delete.png")
+					, url("../images/icons/flat/96/file-text.png");
+		}
+
+		&.preview
+		{
+			background-size: 
+					70% 70%
+					, 100% 100%;
+				background-position:
+					bottom right
+					, center;
+				background-image: 
+					url("../images/icons/flat/96/magnify.png")
+					, url("../images/icons/flat/96/file-text.png");
+		}
+	}
+
+	&.pdf
+	{
+		background-image: url("../images/icons/flat/96/file-pdf.png");
+	}
+
+	&.excel
+	{
+		background-image: url("../images/icons/flat/96/file-excel.png");
+	}
+
+	&.paper-plane
+	{
+		background-image: url("../images/icons/flat/96/paper-plane.png");
+	}
+
+	&.users
+	, &.group
+	{
+		background-image: url("../images/icons/flat/96/profile-group.png");
+	}
+
+	&.repair
+	{
+		background-image: url("../images/icons/flat/96/wrench.png");
+
+		&.document
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+			background-image: 
+				url("../images/icons/flat/96/file-text.png")
+				, url("../images/icons/flat/96/wrench.png");
+		}
+
+		&.service
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+			background-image: 
+				url("../images/icons/flat/96/carton.png")
+				, url("../images/icons/flat/96/wrench.png");
+		}
+
+		&.blog
+		, &.news
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+			background-image: 
+				url("../images/icons/flat/96/news.png")
+				, url("../images/icons/flat/96/wrench.png");
+		}
+	}
+
+	&.news
+	{
+		background-image: url("../images/icons/flat/96/news.png");
+	}
+
+	&.package
+	, &.service
+	{
+		background-image: url("../images/icons/flat/96/carton.png");
+	}
+
+	&.box-in
+	{
+		background-image: url("../images/icons/flat/96/box-in.png");
+	}
+
+	&.box-full
+	{
+		background-image: url("../images/icons/flat/96/box-full.png");
+	}
+
+	&.billing
+	{
+		background-image: url("../images/icons/flat/96/money-graph.png");	
+	}
+
+	&.money
+	{
+		background-image: url("../images/icons/flat/96/money.png");	
+	}
+
+	&.video
+	{
+		background-image: url("../images/icons/flat/96/file-video.png");
+	}
+
+	&.layout
+	{
+		background-image: url("../images/icons/flat/96/window-layout.png");
+	}
+
+	&.style
+	{
+		background-image: url("../images/icons/flat/96/layers.png");
+	}
+
+	&.cns
+	{
+		background-image: url("../images/icons/flat/96/device-tv.png");
+	}
+
+	&.report
+	{
+		background-image: url("../images/icons/flat/96/diagram.png");	
+	}
+
+	&.calendar
+	{
+		background-image: url("../images/icons/flat/96/calendar.png");	
+	}
+
+	&.ticket
+	{
+		background-image: url("../images/icons/flat/96/bubbles-alt.png");
+	}
+
+	&.notice
+	{
+		background-image: url("../images/icons/flat/96/bullhorn.png");
+	}
+
+	&.newsletter
+	{
+		background-image: url("../images/icons/flat/96/news.png");
+	}
+
+	&.newsletter
+	{
+		background-image: url("../images/icons/flat/96/news.png");
+	}
+
+	&.contact
+	{
+		background-image: url("../images/icons/flat/96/user-id.png");
+	}
+
+	&.mail
+	{
+		background-image: url("../images/icons/flat/96/envelope.png");
+
+		&.add
+		, &.delete
+		, &.edit
+		, &.preview
+		{
+			background-size: 
+				60% 60%
+				, 100% 100%;
+			background-position:
+				bottom right
+				, center;
+		}
+
+		&.add
+		{
+			background-image: 
+				url("../images/icons/flat/96/sign-add.png")
+				, url("../images/icons/flat/96/envelope.png");
+		}
+
+		&.edit
+		{
+			background-image: 
+				url("../images/icons/flat/96/pencil.png")
+				, url("../images/icons/flat/96/envelope.png");
+		}
+
+		&.delete
+		{
+			background-image: 
+				url("../images/icons/flat/96/sign-delete.png")
+				, url("../images/icons/flat/96/envelope.png");
+		}
+	}
+
+	&.mail-open
+	{
+		background-image: url("../images/icons/flat/96/envelope-letter.png");
+	}
+
+	&.theme
+	{
+		background-image: url("../images/icons/flat/96/layers.png");
+	}
+
+	&.domain
+	{
+		background-image: url("../images/icons/flat/96/device-drive.png");
+	}
+
+	&.website
+	{
+		background-image: url("../images/icons/flat/96/globe.png");
+	}
+
+	&.log
+	{
+		background-image: url("../images/icons/flat/96/book.png");
+	}
+
+	&.info
+	{
+		background-image: url("../images/icons/flat/96/sign-info.png");
+	}
+
+	&.building
+	{
+		background-image: url("../images/icons/flat/96/building.png");
+	}
+
+	&.post-it
+	{
+		background-image: url("../images/icons/flat/96/post-it.png");
+	}
+
+	&.handshake
+	{
+		background-image: url("../images/icons/flat/96/handshake.png");
+	}
+
+	&.edit
+	{
+		background-image: url("../images/icons/flat/96/pencil.png");
+	}
+}
+
+icon.small
+{
+	width: 47px;
+	height: 48px;
+}
+
+icon.smaller
+{
+	width: 31px;
+	height: 32px;
+}
+
+icon.smallest
+{
+	width: 24px;
+	height: 24px;
+}

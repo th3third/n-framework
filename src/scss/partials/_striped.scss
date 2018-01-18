@@ -1,0 +1,12 @@
+.striped
+{
+	& > *:nth-child(odd)
+	{
+		background-color: #FFF;
+	}
+
+	& > *:nth-child(even)
+	{
+		background-color: #F2F2F2;
+	}
+}

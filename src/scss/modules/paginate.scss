@@ -1,0 +1,45 @@
+div.paginateContainer
+{
+	text-align: center;
+}
+
+ul.paginate
+{
+	list-style: none;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+
+	& li
+	{
+		display: inline-block;
+		background-color: #F2F2F2;
+		border: 1px solid #d4d4d4;
+		min-width: 10px;
+		padding: 0px;
+		margin-left: 3px;
+		margin-right: 3px;
+		color: #000;
+		font-weight: 700;
+		text-align: center;
+
+		&.disabled
+		{
+			
+		}
+
+		&.active
+		{
+			background-color: #7CAAB3;
+			border: 1px solid #666;
+			color: #ffffff;
+			padding: 3px;
+		}
+
+		& a
+		{
+			display: block;
+			padding: 3px;
+		}
+	}
+}

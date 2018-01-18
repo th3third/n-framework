@@ -1,0 +1,23 @@
+.transactions
+{
+	& .success
+	{
+		background-color: #99FF99 !important;
+	}
+
+	& .error
+	{
+		background-color: #FF2800 !important;
+	}
+
+	& .info
+	{
+		background-color: #FFFFCC !important;
+	}
+
+	& .imported
+	{
+		font-weight: bold !important;
+		background-color: #CCC !important;
+	}
+}

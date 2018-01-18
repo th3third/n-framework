@@ -1,0 +1,180 @@
+#systemMessages
+{
+	display: none;
+	width: 100%;
+
+	& .message
+	{
+		text-align: center;
+		border-radius: 0px;
+		margin-bottom: 0px;
+
+		&:last-child
+		{
+			box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+			margin-bottom: 6px;
+		}
+	}
+}
+
+#sessionMsgs
+{
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#SuccessMsg
+, .SuccessMsg
+, #ErrorMsg
+, .ErrorMsg
+, .InfoMsg
+, .DebugMsg
+, .WarningMsg
+, .systemMessage 
+, .message
+{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: 6px 5px;
+	background-size: 24px 24px;
+	background-color: white;
+	border: 1px solid $quaternary-background-color;
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: auto;
+	margin-bottom: 6px;
+	padding: 15px;
+	font-size: 1.45em;
+	color: black;
+	overflow: hidden;
+	position: relative;
+
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+
+	//@include text-shadow();
+
+	& .close
+	{
+		@extend .bigger-octicon;
+		@extend .octicon-x;
+
+		display: block;
+		vertical-align: middle;
+		text-align: center;
+		padding: 4px;
+		text-decoration: none !important;
+	}
+
+	&.floating
+	{
+		opacity: 0.9;
+		position: fixed;
+		top: 2px;
+		pointer-events: none;
+	}
+
+	&.attention
+	{
+		@extend .attention;
+
+		border: 2px solid black;
+	}
+
+	&.warning
+	{
+		background-color: $primary-warning;
+		border: 1px solid $primary-warning-border;
+		color: $primary-warning-font;
+
+		& a
+		{
+			color: #8a6d3b;
+			text-decoration: underline;
+		}
+	}
+
+	&.InfoMsg
+	, &.info
+	{
+		background-color: $primary-info;
+		border-color: #bce8f1;
+		color: #31708f;
+
+		& a
+		{
+			color: #31708f;
+			text-decoration: underline;
+		}
+	}
+
+	#SuccessMsg
+	, &.SuccessMsg 
+	, &.success
+	{
+		background-color: $primary-success;
+		border-color: $primary-success-border;
+		color: $primary-success-font;
+
+		& a
+		{
+			color: $primary-success-font;
+		}
+	}
+
+	#ErrorMsg
+	, &.ErrorMsg
+	, &.error
+	{
+		background-color: $primary-error;
+		border-color: $primary-error-border;
+		color: $primary-error-font;
+
+		a
+		{
+			color: $primary-error-font;
+			text-decoration: underline;
+		}
+	}
+
+	&.WarningMsg
+	, &.warning
+	{
+		background-color: $primary-warning;
+		border-color: #faebcc;
+		color: #8a6d3b;
+	}
+
+	&.DebugMsg
+	, &.debug
+	{
+		background-color: #FCFBE3;
+		color: black;
+	}
+}
+
+.attention
+{
+	background-color: $tertiary-background-color !important;
+	color: white;
+
+	& a
+	{
+		color: white;
+		text-decoration: underline;
+	}
+}

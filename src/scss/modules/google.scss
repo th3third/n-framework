@@ -1,0 +1,50 @@
+.serp
+{
+	position: relative;
+	font-family: arial,sans-serif;
+	line-height: 1.2;
+	color: #222;
+	max-width: 600px;
+
+	& .snippet
+	{
+		color: #545454;
+		font-size: small;
+
+		& .url
+		{
+			height: 17px;
+			line-height: 16px;
+			font-size: 14px;
+			color: #006621;
+			white-space: nowrap;
+			font-style: normal;
+		}
+
+		& .description
+		{
+			line-height: 1.4;
+			word-wrap: break-word;
+			max-height: 4em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-text-overflow: ellipsis;
+		}
+	}
+
+	& .title
+	{
+		text-overflow: ellipsis;
+		-webkit-text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 18px;
+		font-weight: normal;
+		overflow-y: hidden;
+		overflow-x: hidden;
+
+		& a
+		{
+			color: #1a0dab;
+		}
+	}
+}

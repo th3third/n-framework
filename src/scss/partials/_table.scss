@@ -1,0 +1,189 @@
+.main_content_wrapper table:not([role='presentation'])
+{	
+	border-spacing: 0;
+	width: 100%;
+
+	& thead
+	{
+		& tr
+		{
+			& th
+			{
+				color: $table-header-color;
+				font-size: 1.2em;
+				background-color: $table-header-background;
+				padding: 10px 5px;
+				text-align: left;
+				font-weight: normal;
+
+				& a
+				{
+					color: white;
+					text-decoration: underline;
+				}
+
+				&:first-child
+				{
+					border-top-left-radius: 5px;
+					padding-left: 10px;
+				}
+
+				&:last-child
+				{
+					border-top-right-radius: 5px;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+
+	& tbody
+	{
+		background: $table-body-background;
+		color: $table-body-color;
+
+		& tr
+		{
+			& td
+			{
+				padding: 10px 5px;
+
+				&:first-child
+				{
+					padding-left: 10px;
+				}
+
+				&:last-child
+				{
+					padding-right: 10px;
+				}
+			}
+
+			&.credit
+			{
+				background-color: $primary-info !important;
+			}
+
+			&.fee
+			{
+				background-color: $primary-success !important;
+			}
+
+			&.attention
+			{
+				background-color: #00A6DD !important;
+				color: white;
+			}
+
+			&.success
+			{
+				background-color: $primary-success !important;
+				color: $primary-success-font;
+			}
+
+			&.warning
+			{
+				background-color: #FFCC00 !important;
+			}
+
+			&.faded
+			{
+				background-color: #f2f2f2 !important;
+			}
+		}
+	}
+
+	&.bordered
+	{
+		box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.05);
+		border: 1px solid #DEF0F4;
+		@include border-radius(5px);
+	}
+
+	&.striped
+	{
+		& tbody
+		{
+			& tr
+			{
+				&:nth-child(odd)
+				{
+					background-color: #FFF;
+				}
+
+				&:nth-child(even)
+				{
+					background-color: #F2F2F2;
+				}
+
+				&:hover
+				{
+					//background-color: #DEF0F4;
+				}
+			}
+		}
+	}
+}
+
+.nykcTableHeader
+, #nykcRightTableHeader
+, #nykcRightTableHeader 
+{
+	& th
+	{
+		padding: 5px;
+		height: 10px;
+		color: $table-header-color;
+		font-size: 1.2em;
+		margin: 0px 0 10px 0;
+		background-color: $table-header-background;
+		padding: 5px;
+		border-bottom: 1px solid #606060;
+		text-align: left;
+		font-weight: normal;
+
+		&:first-child
+		{
+		border-top-left-radius: 5px;
+		}
+
+		&:last-child
+		{
+		border-top-right-radius: 5px;
+		}
+	}
+}
+
+@media print
+{
+	table
+	{
+		@include box-shadow(none);
+
+		& thead
+		{
+			& tr
+			{
+				& th
+				{
+					&:first-child
+					{
+						@include border-radius(0px);
+					}
+
+					&:last-child
+					{
+						@include border-radius(0px);
+					}
+				}
+			}
+		}
+
+		&.bordered
+		{
+			border: 1px solid black;
+			@include border-radius(0px);
+			@include box-shadow(none);
+		}
+	}
+}

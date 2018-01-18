@@ -1,0 +1,8 @@
+.gump-error-message
+{
+	&:after
+	{
+		content: "\A";
+    	white-space: pre; 
+	}
+}

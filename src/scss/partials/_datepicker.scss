@@ -1,0 +1,21 @@
+#calBorder
+{
+	& table
+	{
+		& tbody
+		{
+			& tr
+			{
+				& td
+				{
+					padding: 1px;
+				}
+			}
+		}
+	}
+
+	& input[type="text"]
+	{
+		padding: 1px;
+	}
+}

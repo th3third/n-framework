@@ -1,0 +1,508 @@
+.interactable
+{
+	border: 1px solid #00A6DD;
+
+	&:not(input)
+	{
+		cursor: pointer;
+	}
+
+	&:active
+	, &:focus:not(button)
+	{
+		box-shadow: inset 0 0 0 1px #27496d,inset 0 1px 5px #666;
+		border-color: clear;
+	}
+
+	&:disabled
+	, &:disabled:hover
+	{
+		background: #b3b3b3;
+		border-color: gray;
+		color: #EFEFEF;
+		cursor: not-allowed;
+	}
+
+	&.loading
+	{
+		cursor: progress !important;
+		pointer-events: none !important;
+
+		&:before
+		{
+			content: none !important;
+		}
+
+		&:after
+		{
+			@extend .octicon;
+			content: "\f087" !important;
+			display: inline-block;
+			-webkit-animation: spin 2s linear infinite;
+			-moz-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		&.button-long
+		, &.button-mega
+		{
+			&:after
+			{
+				margin-left: $buffer-short;
+			}
+		}
+	}
+}
+
+.pointer
+{
+	cursor: pointer;
+}
+
+.mover
+{
+	cursor: move;
+}
+
+button
+, a
+{
+	&.button-square
+	{
+		@extend button.button-rectangle;
+		height: 250px;
+	}
+
+	&.button-rectangle
+	{
+		@extend .interactable;
+		@include border-radius(4px);
+		@include box-shadow(1px 1px 2px 0 rgba(0, 0, 0, 0.05));
+		display: inline-block;
+		background: white;
+		padding: 15px 20px;
+		border: 1px solid #DEF0F4;
+		color: black;
+		width: 250px;
+
+		&:hover
+		{
+			box-shadow: inset 0 0 0 1px #27496d,inset 0 1px 5px #666;
+			border-color: clear;
+		}
+	}
+}
+
+input[type="button"]
+, input[type="submit"]
+, input[type="reset"]
+, button
+, a.button
+, a.button-long
+, a.button-mega
+, a.button-short
+, .link_outline a
+, .link_button
+{
+	@include box-shadow(2px 2px 0px 1px rgba(173, 84, 4, .9));
+	font-size: $button-font-size !important;
+	font-weight: normal;
+	cursor: pointer;
+	display: inline-block;
+	min-height: $button-height;
+	box-sizing: border-box;
+
+	background-color: $primary-button;
+	border-color: $primary-button-border;
+	border-radius: $border-radius-amount;
+	color: $primary-button-font;
+	padding: 5px 10px;
+	@include box-shadow(0px 2px 2px rgba(50, 50, 50, 0.15));
+
+	&:hover
+	{
+		background-color: $button-hover-color;
+		@include box-shadow(0 0 5px #ccc);
+	}
+
+	&.ui-button
+	{
+		min-height: 10px;
+	}
+}
+
+button
+, a.button
+, input[type="submit"]
+, input[type="submit"].button
+, input[type="button"]
+, input[type="button"].button
+{
+	@extend .interactable;
+
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none !important;
+
+	color: $button-font-color;
+	background-color: $button-color;
+	border-color: $button-border-color;
+
+	&:before
+	{
+		font-size: $button-icon-size !important;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
+
+	&.page-action
+	{
+		background-color: #F6F6F6;
+		color: #333;
+
+		&:hover:not([disabled])
+		{
+			background-color: white;
+		}
+	}
+	
+	&.delete
+	{		
+		@extend button.negative;
+
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-trashcan;
+		}
+	}
+
+	&.preview
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-search;
+		}
+	}
+
+	&.settings
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-gear;
+		}
+	}
+
+	&.layout
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-browser;
+		}
+	}
+
+	&.reset
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-reset;
+		}
+	}
+
+	&.plus
+	, &.add
+	{
+		color: $primary-button-font;
+		background-color: $primary-button;
+		border-color: $primary-button-border;
+
+		&:before
+		{
+			
+		}
+	}
+
+	&.check
+	, &.confirm
+	, &.save
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-check;
+		}
+	}
+
+	&.negative
+	{
+		color: $button-delete-font-color;
+		background-color: $button-delete-color;
+		border-color: $button-delete-border-color;
+
+		&:hover
+		{
+			background-color: $button-delete-hover-color;
+		}
+	}
+
+	&.positive
+	{
+		color: $button-positive-font-color;
+		background-color: $button-positive-color;
+		border-color: $button-positive-border-color;
+
+		&:hover
+		{
+			background-color: $button-positive-hover-color;
+		}
+	}
+
+	&.warning
+	{
+		color: $button-warning-font-color;
+		background-color: $button-warning-color;
+		border-color: $button-warning-border-color;
+
+		&:hover
+		{
+			background-color: $button-warning-hover-color;
+		}
+	}
+
+	&.action
+	{
+		color: $button-action-font-color;
+		background-color: $button-action-color;
+		border-color: $button-action-border-color;
+
+		&:hover
+		{
+			background-color: $button-action-hover-color;
+		}
+	}
+
+	&.cancel
+	, &.x
+	{		
+		@extend .button.negative;
+
+		&:before
+		{	
+			@extend .octicon;
+			@extend .octicon-x;
+		}
+	}
+
+	&.undo
+	, &.reply
+	, &.back
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-mail-reply;
+		}
+	}
+
+	&.search
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-search;
+		}
+	}
+
+	&.pin
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-pin;
+		}
+	}
+
+	&.movable
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-three-bars;
+		}
+	}
+
+	&.suspend
+	, &.disable
+	{
+		@extend button.warning;
+
+		&:before
+		{	
+			@extend .octicon;
+			@extend .octicon-primitive-square;
+		}
+	}
+
+	&.resume
+	{
+		@extend button.positive;
+
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-triangle-right;
+		}
+	}
+
+	&.key
+	, &.security
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-key;
+		}
+	}
+
+	&.organization
+	{
+		&:before
+		{
+			@extend .octicon;
+			@extend .octicon-organization;
+		}
+	}
+}
+
+a.button-short
+, button.button-short
+, input.button-short
+{
+	@extend a.button;
+
+	padding: 5px;
+	width: $button-width;
+	max-width: $button-width;
+}
+
+a.button-long
+, button.button-long
+, input.button-long
+{
+	@extend a.button;
+
+	width: auto !important;
+	max-width: $button-long-width !important;
+	padding-left: $buffer-short !important;
+	padding-right: $buffer-short !important;
+
+	&:before
+	{
+		padding-right: $buffer-short;
+	}
+}
+
+a.button-mega
+, button.button-mega
+{
+	@extend a.button-long;
+	max-width: $button-mega-width;
+}
+
+a.button-unlimited
+, button.button-unlimited
+{
+	@extend a.button-long;
+	max-width: 100%;
+}
+
+.serviceOption 
+{
+	width: 150px;
+	height: 135px;
+	font-size: 1.05em;
+	text-align: center;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.05);
+	margin-right: auto;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	background: #FFF;
+	border-radius: 4px;
+	border: 1px solid #DEF0F4;
+	color: black;
+	float: left;
+}
+
+.serviceOption_NoFloat 
+{
+	width: 150px;
+	height: 120px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	border: 1px solid #d4d4d4;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 25px;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	margin: auto;
+}
+
+.serviceOption a 
+{
+	color: #000;
+	display: block;
+	height: 100%;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.serviceOption_NoFloat a 
+{
+	color: #000;
+	display: block;
+}
+
+.serviceOption:hover, .serviceOption_NoFloat:hover 
+{
+	background-color: #DEF0F4;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+}
+
+.serviceOptionText 
+{
+	margin-top: 10px;
+}
+
+/* Fix for colorbox exit button */
+#cboxClose
+{
+	margin-bottom: 0px;
+	border: none;
+	@include box-shadow(none);
+	min-height: initial;
+}
+
+#searchButton
+{
+	background-color: transparent;
+	border: none !important; 
+	cursor: pointer; 
+	top: 20px; 
+	right: 12px; 
+	width: 25px; 
+	height: 25px;
+	padding: 0px;
+	box-shadow: none;
+	font-size: 16px;
+}

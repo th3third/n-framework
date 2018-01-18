@@ -1,0 +1,164 @@
+input[type="checkbox"]
+, input[type="radio"]
+{
+	cursor: pointer;
+
+	&:disabled
+	{
+		cursor: not-allowed;
+	}
+}
+
+input[type="text"]
+, input[type="password"]
+, input[type="search"]
+, input[type="email"]
+, input[type="url"]
+, input[type="date"]
+, input[type="number"]
+, select
+{
+	@include border-radius(4px);
+	@extend .interactable;
+
+	font-family: $primary-font-family;
+	font-size: $input-font-size;
+	box-sizing: inherit;
+	padding: 3px 7px;
+	height: $input-height;
+	color: black;
+	min-width: 40px;
+	min-height: $input-height;
+
+	&:focus
+	{
+		background-color: #DEF0F4;
+	}
+}
+
+input[type="button"]
+, input[type="submit"]
+{
+	@extend .interactable;
+}
+
+select
+{
+	@extend .interactable;
+
+	line-height: 26px;
+
+	&[multiple]
+	{
+		min-height: 100px;
+	}
+}
+
+textarea
+{
+	@include border-radius(4px);
+	@extend .interactable;
+
+	font-family: $primary-font-family;
+	font-size: 1.05em;
+	box-sizing: inherit;
+	padding: $buffer-short;
+	background-color: white;
+	color: black;
+	min-width: 40px;
+	cursor: text !important;
+}
+
+input[type="checkbox"]:disabled
+{
+	background: none;
+}
+
+input:required:valid
+, input:required:invalid
+, input:focus:invalid
+, input:invalid
+, input.invalid
+{
+	background-position: 99% center;
+	background-repeat: no-repeat;
+	background-size: 20px 22px;
+}
+
+input:required:valid
+{
+	//background-image: url(../images/message_success.png);
+}
+
+input.invalid
+{
+	//background-color: #FFCCCC;
+	//background-image: url(../images/message_error.png);
+	border: 2px solid $primary-error-border;
+}
+
+input[type=checkbox]
+, input[type=radio]
+{
+	/* Increased size Checkboxes */
+	-ms-transform: scale(1.4); /* IE */
+	-moz-transform: scale(1.4); /* FF */
+	-webkit-transform: scale(1.4); /* Safari and Chrome */
+	-o-transform: scale(1.4); /* Opera */
+	padding: 5px;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+	@extend .interactable;
+
+	border-width: 2px;
+    display: block; overflow: hidden; cursor: pointer;
+    @include border-radius($border-radius-amount);
+    height: $input-height;
+}
+.onoffswitch-inner {
+    display: block; width: 205%; margin-left: -100%; margin-top: -2px;
+    transition: margin 0.3s ease-in 0s;
+    height: $input-height;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: $button-height; padding: 0; line-height: $input-height;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #00A6DD; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #3E3E3E; color: #333333;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 25px; margin: 0px;
+    background: black;
+    position: absolute; top: 0; bottom: 0;
+    right: 65px;
+    transition: all 0.3s ease-in 0s; 
+    @include border-radius($border-radius-amount);
+    height: $input-height;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}

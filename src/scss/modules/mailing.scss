@@ -1,0 +1,48 @@
+#mailingProgressBar
+{
+	width: 100%;
+	border: 1px solid $table-header-background;
+	@include border-radius(4px);
+}
+
+.nykcMailingTimeline 
+{
+	background: $table-header-background;
+	height: 40px;
+	color: $table-header-color;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover
+	{
+		background: #777;
+	}
+
+	&.active
+	{
+		background: #888;
+
+		&:before
+		{
+			content: ">>";
+		}
+
+		&:after
+		{
+			content: "<<";
+		}
+	}
+}
+
+.pageOptionContainer 
+{
+	@extend .panel;
+
+	width: 100%;
+	height: 54px;
+	padding: 10px;
+	margin: 15px 0 15px 0;
+}

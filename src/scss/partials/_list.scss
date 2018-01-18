@@ -1,0 +1,23 @@
+ul, ol{
+	&.no-style{
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	&.striped{
+		& > li{
+			&:nth-child(odd){
+				background-color: #FFF;
+			}
+
+			&:nth-child(even){
+				background-color: #F2F2F2;
+			}
+
+			&:hover{
+				background-color: #DEF0F4;
+			}
+		}
+	}
+}

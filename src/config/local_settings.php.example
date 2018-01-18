@@ -1,0 +1,30 @@
+<?php
+
+	/*
+	|------------------------------------------------
+	| local_settings.php
+	|------------------------------------------------
+	| 
+	| This is where you should place sensitive and server specific information. local_settings.php is not included in the repo,
+	| so you will have to place this file yourself in the base /config folder. Although it will run without it,
+	| NYKC will not be able to connect to anything without providing credentials to the MySQL database that has been set up appropriately.
+	|
+	| Listed below are the values that, at minimum, must be defined to run.
+	|
+	*/
+
+	return array(
+
+		/*
+		|------------------------------------------------
+		| Database connection settings
+		|------------------------------------------------
+		*/
+
+		'DB_TYPE' => 'mysql'
+		, 'DB_HOST' => 'localhost'
+		, 'DB_PORT' => '3306'
+		, 'DB_DATABASE' => 'app'
+		, 'DB_USERNAME' => 'root'
+		, 'DB_PASSWORD' => ''
+	);

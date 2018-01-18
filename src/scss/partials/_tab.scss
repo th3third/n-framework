@@ -1,0 +1,263 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+/*--------------------------------------------------
+	REQUIRED to hide the non-active tab content.
+	But do not hide them in the print stylesheet!
+	--------------------------------------------------*/
+.tabberlive .tabbertabhide 
+{
+	display: none; 
+}
+
+/*--------------------------------------------------
+	.tabber = before the tabber interface is set up
+	.tabberlive = after the tabber interface is set up
+	--------------------------------------------------*/
+.tabberlive 
+{
+	margin-top: 1em; 
+}
+
+/*--------------------------------------------------
+	ul.tabbernav = the tab navigation list
+	li.tabberactive = the active tab
+	--------------------------------------------------*/
+ul.tabbernav 
+{
+	margin: 0;
+	padding: 3px 0;
+	font-family: 'Ubuntu', sans-serif; 
+}
+
+ul.tabbernav li 
+{
+	list-style: none;
+	margin: 0;
+	display: inline; 
+}
+
+ul.tabbernav li a 
+{
+	padding: 3px 0.7em;
+	margin-left: 5px;
+	border-bottom: none;
+	background: #FFF;
+	text-decoration: none; 
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+/*--------------------------------------------------
+	.tabbertab = the tab content
+	Add style only after the tabber interface is set up (.tabberlive)
+	--------------------------------------------------*/
+.tabberlive .tabbertab 
+{
+	padding: 0px;
+	border-top: 0;
+	border-radius: 3px;
+	/* If you don't want the tab size changing whenever a tab is changed
+		you can set a fixed height */
+	/* height:200px; */
+	/* If you set a fix height set overflow to auto and you will get a
+		scrollbar when necessary */
+	/* overflow:auto; */ 
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 
+{
+	display: none; 
+}
+
+.tabberlive .tabbertab h3 
+{
+	display: none; 
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab2 .tabbertab 
+{
+	height: 200px;
+	overflow: auto; 
+}
+
+.tabs
+, ul[role='tablist']
+{
+	width: 100%;
+	float: none;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	margin-top: 15px;
+	@include border-radius(4px);
+
+	&:after
+	{
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	& > input[type=radio] 
+	{
+		display:none;
+	}
+
+	& > label
+	{
+		border-radius: 4px 4px 0px 0px;
+	}
+
+	& > li[role='tab']
+	{
+		@include border-radius(4px);
+	}
+
+	& > label
+	, & > li[role='tab']
+	{
+		display: block;
+		float: left;
+		font-weight: normal;
+		text-decoration: none;
+		text-align: center;
+		line-height: 2;
+		cursor: pointer;
+		padding: 0px 15px;
+		margin-left: 5px;
+		background-color: $quaternary-background-color;
+		color: $quaternary-font-color;
+
+		& span
+		{
+			@extends .unselectable;
+			
+			display: inline-block;
+		}
+
+		& i
+		{
+			margin-right: 0px;
+		}
+
+		&:hover
+		, &.current
+		{
+			background-color: $primary-button;
+			color: white;
+
+			& a
+			{
+				color: white;
+			}
+		}
+
+		&.invalid
+		{
+			background-color: $primary-error !important;
+			border-color: $primary-error-border !important;
+			color: $primary-error-font !important;
+
+			&:hover
+			{
+				background-color: $primary-error-hover !important;
+			}
+		}
+
+		a
+		{
+			color: #DDD;
+		}
+	}
+}
+
+.tab-content 
+{
+	display: none;
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	@include border-radius($border-radius-amount);
+	background-color: $primary-button;
+	border: 1px soild black;
+	padding: $buffer-short;
+
+	&.invalid
+	{
+		background-color: $primary-error !important;
+	}
+
+	& > h1:first-child
+	, & > h2:first-child
+	, & > h3:first-child
+	, & > h4:first-child
+	, & > h5:first-child
+	{
+		height: 25px;
+	    color: white;
+	    font-size: 1.2em;
+	    width: auto;
+	    background-color: $secondary-blue;
+	    padding: 5px;
+	    text-align: left;
+	    font-weight: normal;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+.tabs [id^="tab"]:checked + label 
+{
+	background-color: $primary-button;
+	color: #FFFFFF;
+	height: 33px;
+}
+
+#tab0:checked ~ #tab-content0
+, #tab1:checked ~ #tab-content1
+, #tab2:checked ~ #tab-content2
+, #tab3:checked ~ #tab-content3
+, #tab4:checked ~ #tab-content4
+, #tab5:checked ~ #tab-content5
+, #tab6:checked ~ #tab-content6
+, #tab7:checked ~ #tab-content7
+, #tab8:checked ~ #tab-content8
+, #tab9:checked ~ #tab-content9
+, #tab10:checked ~ #tab-content10
+{
+	display: block;
+}
+
+div.steps
+{
+	margin-bottom: $buffer-long;
+}
+
+ul[role='tablist']
+{
+	& .current-info
+	{
+		display: none !important;
+	}
+}
+
+ul[role='menu']
+{
+	text-align: right;
+
+	& > li
+	{
+		@extend a.button-long;
+		margin-right: $buffer-standard;
+
+		& a
+		{
+			color: white;
+		}
+	}
+}

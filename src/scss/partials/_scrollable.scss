@@ -1,0 +1,36 @@
+.scrollable
+{
+	overflow-y: scroll;
+}
+
+.page-height
+{
+	max-height: $page-height;
+
+	&.fixed
+	{
+		height: $page-height;
+	}
+}
+
+.page-height-two-thirds
+, .page-height-2-3
+{
+	max-height: $page-height * 0.66;
+
+	&.fixed
+	{
+		height: $page-height * 0.66;
+	}
+}
+
+.page-height-one-third
+, .page-height-1-3
+{
+	max-height: $page-height * 0.33;
+
+	&.fixed
+	{
+		height: $page-height * 0.33;
+	}
+}

@@ -1,0 +1,547 @@
+.ticket-reply
+{
+	min-height: 275px;
+
+	& .message
+	{
+		height: 235px;
+		min-height: 235px;
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+		padding: 5px;
+	}
+
+	& .attachments
+	{
+		padding: 10px 5px 0px 15px;
+		min-height: 40px;
+	}
+
+	& #attachments
+	{
+		list-style: none;
+
+		& li
+		{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.ticket-departments
+{
+	border-right: 1px solid black;
+	color: black;
+	padding: 10px 0px;
+
+	& #ticket-search-term
+	{
+		padding: 3px;
+		margin-left: 1em;
+		margin-bottom: 15px;
+		width: 90%;
+		box-sizing: border-box;
+	}
+
+	& h2
+	{
+		padding-left: 15px;
+		margin-bottom: 20px;
+	}
+
+	& a
+	{
+		color: black;
+	}
+
+	ul
+	{
+		padding: 0px;
+
+		&.department-list
+		{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			padding-right: 15px;
+			position: relative;
+			width: 100%;
+			font-size: 1.1em;
+
+			& ul
+			{
+				list-style: none;
+				margin-top: 5px;
+				padding-left: 1em;
+			}
+
+			& li
+			{
+				padding: 7px 0px 7px 15px;
+				position: relative;
+
+				&.selected
+				{
+					background-color: #DDD;
+					@include border-radius(10px);
+				}
+
+				& .expand
+				{
+					position: absolute;
+					right: 10px;
+					top: 5px;
+					margin-top: 0px;
+					font-size: 1.1em;
+					text-align: center;
+					width: 10px;
+					height: 10px;
+					cursor: pointer;
+				}
+
+				&.header
+				{
+					background-color: #EEE;
+					height: 25px;
+					font-weight: bold;
+					border: 1px solid #DDD;
+					padding-right: 7px;
+					cursor: default;
+				}
+
+				& label span
+					{
+						cursor: pointer;
+					}
+
+				& [id^="togList"]
+				{
+					display: none;
+			
+					&:checked + label span
+					, & ~ .list
+					, & + label span + span
+					{
+						display: none;
+					}
+
+					&:checked + label span + span
+					, &:checked + label span + span .expand
+					{
+						display: inline-block;
+					}
+
+					&:checked ~ .list
+					{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.ticket-manage
+{
+	padding: 10px 0px;
+	font-size: 1.1em;
+
+	&.customer
+	{
+		padding: 30px 120px 60px 120px;
+	}
+
+	& .status
+	{
+
+	}
+
+	& .open
+	{
+		& .status
+		{
+			color: #2bb673; 
+			font-weight: bold;
+		}
+	}
+
+	& .closed
+	{
+		opacity: 0.6;
+		color: gray;
+		}
+
+	& h1
+	{
+		margin-bottom: 15px;
+	}
+}
+
+.ticket-table
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	& a
+	{
+		text-decoration: underline;
+		color: black;
+	}
+
+	& tr
+	{
+		& td
+		{
+			padding: 5px;		
+		}
+
+		&.overdue
+		{
+			background-color: #FFBABA !important;
+			border: 1px solid #FF7F7F !important;
+			font-weight: bold !important;
+		}
+
+		&.notice
+		{
+			background-color: #BDE5F8;
+			border: 1px solid #00529b;
+			color: black;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+
+	& thead
+	{
+		color: $table-header-color;
+		background-color: $table-header-background;
+	}
+
+	& tbody
+	{
+
+	}
+}
+
+#ticketOverlay
+{
+	@extend .panel;
+	position: fixed;
+	background-color: $primary-background-color;
+	color: $primary-font-color;
+	border: 1px solid #c3c2c4;
+	bottom: 25px;
+	right: 5px;
+	z-index: 666;
+	height: auto;
+	width: 15%;
+	padding: 5px;
+	text-align: right;
+
+	.ticketList
+	{
+		margin: 0px;
+	}
+}
+
+.ticket-create
+{
+	@extend .panel;
+	padding: 20px 0px 60px 0px;
+
+	& .header
+	{
+		margin-bottom: 45px;
+	}
+
+	& .ticket-instructions
+	{
+		@extend .ticket-message;
+	}
+}
+
+.ticket-history
+{
+
+	& .details
+	{
+		& ul
+		{
+			@extend ul.no-style;
+
+			padding: 0;
+			margin: 0;
+
+			max-height: 480px;
+			overflow-y: scroll;
+
+			& li
+			{
+				padding: 10px;
+
+				&.selected
+				{
+					@include border-radius(10px);
+					background-color: #CCCCCC;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.ticket-view
+{
+	@extend .panel;
+	padding: 0px 0px 40px 0px;
+
+	& .ticket-lock
+	{
+		text-align: center;
+		left: 25px;
+		width: 100px;
+		position: relative;
+	}
+
+	& .ticket-info
+	{
+		border-bottom: 1px solid #666;
+		margin-bottom: 15px;
+
+		& .details
+		{
+			border-collapse: collapse;
+			width: 100%;
+
+			& td
+			{
+				padding: 5px 25px 5px 25px;
+				text-align: center;
+			}
+	
+			& thead
+			{
+				color: $table-header-color;
+				background-color: $table-header-background;
+				font-weight: bold;
+			}
+		}
+
+		& .details-customer
+		{
+			background: black;
+			color: white;
+			padding: 10px;
+			font-weight: bold;
+
+			& .value
+			{
+				font-size: 1.35em;
+			}
+		}
+
+		& .ticket-status-info
+		{
+			background: black;
+			color: white;
+			padding: 15px 10px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.15em;
+		}
+	}
+
+	& .ticket-notes
+	{
+		margin: 0;
+		padding: 0;
+
+		margin-bottom: 10px;
+
+		& ul
+		{
+			@extend ul.no-style;
+			box-sizing: border-box;
+			border: 1px solid #EFEFEF;
+			height: 207px;
+			overflow-y: scroll;
+			padding: 0;
+			margin: 0px 0px 10px 0px;
+
+			& li
+			{
+				margin: 0;
+
+				& .date
+				{
+					text-align: right;
+					padding: 10px 10px 0px 0px;
+				}
+
+				& .content
+				{
+					box-sizing: inherit;
+					padding: 0px 5px 10px 10px;
+				}
+
+				&:nth-child(even)
+				{
+					background-color: #EFEFEF;
+				}
+			}
+		}
+
+		& textarea
+		{
+			height: 65px;
+			width: 100%;
+		}
+	}
+
+	& .ticket-message
+	{
+		& img.portrait
+		{
+			@include border-radius(100px);
+		}
+
+		& .owner
+		{
+			box-sizing: border-box;
+			background: url("../images/portrait_placeholder.png");
+			background-repeat: no-repeat;
+			min-height: 65px;
+		}
+
+		& .attachments
+		{
+			list-style: none;
+
+			& li
+			{
+				margin-bottom: 10px;
+			}
+		}
+
+		& .speech-bubble
+		{
+			@include border-radius(20px);
+			position: relative;
+			padding: 10px;
+			background: #EFEFEF;
+			border: #000000 solid 2px;
+			margin-bottom: 25px;
+
+			&:before
+			{
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 18px 9px 0;
+				border-color: #000000 transparent;
+				display: block;
+				width: 0;
+				z-index: 0;
+				bottom: -20px;
+			}
+
+			&:after
+			{
+				content: '';
+				position: absolute;
+				border-style: solid;
+				border-width: 17px 8px 0;
+				border-color: #EFEFEF transparent;
+				display: block;
+				width: 0;
+				z-index: 1;
+				bottom: -17px;
+			}
+		}
+
+		&:nth-child(even)
+		{
+			& .owner
+			{
+				padding-left: 80px;	
+				background-position: left top;
+			}
+
+			& .speech-bubble
+			{
+				&:before
+				{
+					left: 34px;
+					margin-left: -12px;
+				}
+
+				&:after
+				{
+					left: 35px;
+					margin-left: -12px;
+				}
+			}
+		}
+
+		&:nth-child(odd)
+		{
+			& .date
+			{
+				text-align: right;
+			}
+
+			& .owner
+			{
+				text-align: right;
+				padding-right: 80px;
+				background-position: right top;
+			}
+
+			& .speech-bubble
+			{
+				&:before
+				{
+					right: 20px;
+				}
+
+				&:after
+				{
+					right: 21px;
+				}
+			}
+		}
+	}
+
+	& .ticket-details
+	{
+		& .details
+		{
+			padding: 10px;
+		}
+	}
+
+	& .account-details
+	{
+		& .details
+		{
+			padding: 10px;
+		}
+	}
+
+	& .ticket-merge
+	{
+		& .details
+		{
+			padding: 10px;
+		}
+	}
+}
+
+#ticketSearchToggle
+{
+	cursor: pointer;
+}
